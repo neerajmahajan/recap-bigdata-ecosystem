@@ -21,7 +21,7 @@ hdfs dfs -cat sqoop-mysql-import/country/part-m-00000
 * format : Use below format and save as hdr-options.txt
 * To run import now do
 
-sqoop --options-file hdr-options.txt --table product -m 1 --target-dir <path>
+```sqoop --options-file hdr-options.txt --table product -m 1 --target-dir <path>```
 
 ```
 import
@@ -31,4 +31,10 @@ jdbc:mysql://fin-server/hdr
 root
 --password
 root_password
+```
+
+###### Using query to import data and using multiple mappers
+```
+sqoop --options-file hdr-options.txt -m 4 --target-dir <path> 
+--query "SELECT id,name from product where brand='hero' AND \$CONDITIONS" --split-by ID
 ```
