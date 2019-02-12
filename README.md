@@ -59,6 +59,9 @@ sqoop --options-file hdr-export-options.txt
 
 
 * Adding file to HDFS ```hdfs dfs -put sample.csv /tmp/serdes/```
+* ```hdfs dfs -get  myfile.csv```
+* ```hdfs dfs -ls ```
+* ```hdfs dfsadmin -report ```
 
 ##### Map - Reduce
 * Based on Key,Value pairs.
