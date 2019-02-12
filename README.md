@@ -38,3 +38,14 @@ root_password
 sqoop --options-file hdr-options.txt -m 4 --target-dir <path> 
 --query "SELECT id,name from product where brand='hero' AND \$CONDITIONS" --split-by id
 ```
+
+###### Export
+
+```
+sqoop --options-file hdr-export-options.txt 
+--table product --staging-table product_staging
+--clear-staging-table
+-m 4
+--export-dir <path> 
+--query "SELECT id,name from product where brand='hero' AND \$CONDITIONS" --split-by id
+```
