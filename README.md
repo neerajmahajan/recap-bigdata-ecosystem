@@ -36,5 +36,5 @@ root_password
 ###### Using query to import data and using multiple mappers
 ```
 sqoop --options-file hdr-options.txt -m 4 --target-dir <path> 
---query "SELECT id,name from product where brand='hero' AND \$CONDITIONS" --split-by ID
+--query "SELECT id,name from product where brand='hero' AND \$CONDITIONS" --split-by id
 ```
