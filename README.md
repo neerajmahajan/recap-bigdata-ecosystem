@@ -49,3 +49,6 @@ sqoop --options-file hdr-export-options.txt
 --export-dir <path> 
 --query "SELECT id,name from product where brand='hero' AND \$CONDITIONS" --split-by id
 ```
+######  Hadoop Basic commmands
+
+* Adding file to HDFS ```hdfs dfs -put sample.csv /tmp/serdes/```
