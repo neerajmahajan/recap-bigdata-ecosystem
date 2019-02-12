@@ -49,6 +49,23 @@ sqoop --options-file hdr-export-options.txt
 --export-dir <path> 
 --query "SELECT id,name from product where brand='hero' AND \$CONDITIONS" --split-by id
 ```
-######  Hadoop Basic commmands
+######  HDFS
+
+* Client node ask NameNode where to find data.
+* Name node says use these nodes.
+* Data node, respond back to NAme node about the status.
+* HDFS doesn't support hard/soft links.
+* 64MB blocks
+
 
 * Adding file to HDFS ```hdfs dfs -put sample.csv /tmp/serdes/```
+
+##### Map - Reduce
+* Based on Key,Value pairs.
+* Moving computation is cheaper than moving data.
+* Data is sliced and stored in distributed and replicate form.
+* Map is applied parallely on each data slice.
+* Each map operation writes the ouput to disk
+* Reduce step take the processed data and does the reduction.
+* Computation is moved to where data reside.
+
